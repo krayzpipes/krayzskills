@@ -35,11 +35,11 @@ Smell: a caller makes many fine-grained calls to complete a single logical opera
 
 Choose a coarse operation only after preserving the intended semantics:
 
-| Caller intent | Suitable operation | Contract to specify |
-| --- | --- | --- |
-| Add several new entries while retaining existing entries | `AddBatch(entries)` | Duplicate handling and all-or-nothing versus per-item results |
-| Insert or update several entries by identity | `UpsertBatch(entries)` | Identity, update rules, conflict handling, and failure results |
-| Set the complete snapshot to exactly these entries | `ReplaceAll(entries)` | Removal of absent entries, empty input, atomicity, and failure state |
+| Caller intent                                            | Suitable operation     | Contract to specify                                                  |
+| -------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------- |
+| Add several new entries while retaining existing entries | `AddBatch(entries)`    | Duplicate handling and all-or-nothing versus per-item results        |
+| Insert or update several entries by identity             | `UpsertBatch(entries)` | Identity, update rules, conflict handling, and failure results       |
+| Set the complete snapshot to exactly these entries       | `ReplaceAll(entries)`  | Removal of absent entries, empty input, atomicity, and failure state |
 
 Replacing an `Add` loop with `ReplaceAll` can silently delete existing entries. A single batch call may still apply partially; document and test the actual guarantee. Repeated small calls are acceptable when each is an independent action, streaming is necessary, or the caller intentionally needs per-item control.
 

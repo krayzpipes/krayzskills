@@ -7,7 +7,10 @@ Unreleased until a release is published.
 
 ### Added
 
-- Seven portable skills from the personal VDR collection: `go-architecture`,
+- Pre-commit hooks for formatting, Markdown linting, YAML/JSON validation,
+  whitespace, merge-conflict markers, skill metadata, and local Markdown links.
+
+- Seven portable skills from the personal collection: `go-architecture`,
   `go-idioms`, `go-errors`, `go-concurrency`, `message-driven-design`,
   `tdd-workflow`, and `verify-workflow`.
 - Five adaptations of [poteto's pstack skills](https://github.com/cursor/plugins/tree/main/pstack):
@@ -21,8 +24,7 @@ Unreleased until a release is published.
 
 ### Changed
 
-- Generalized VDR-specific guidance into independently usable skills, including
-  renaming `vdr-architecture` to `go-architecture`.
+- Generalized project-specific guidance into independently usable skills.
 - Replaced fixed repository paths and required verification tooling with guidance
   that follows the host project's conventions and available checks.
 - Adapted pstack workflows to remove Cursor-specific tooling and fixed model

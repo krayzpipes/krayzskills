@@ -2,13 +2,13 @@
 
 Read before reporting a design rationale.
 
-| Evidence | Appropriate claim |
-|---|---|
-| A contemporaneous source explicitly gives a reason | Report that recorded reason with its citation |
-| Several independent records converge | Describe the supported interpretation and its evidence |
-| Context suggests a reason without documenting it | Label the inference and explain the reasoning |
-| Several explanations fit sparse records | Present useful hypotheses without choosing an unsupported winner |
-| Relevant searches cannot establish a reason | Say it remains unknown and identify the search limits |
+| Evidence                                           | Appropriate claim                                                |
+| -------------------------------------------------- | ---------------------------------------------------------------- |
+| A contemporaneous source explicitly gives a reason | Report that recorded reason with its citation                    |
+| Several independent records converge               | Describe the supported interpretation and its evidence           |
+| Context suggests a reason without documenting it   | Label the inference and explain the reasoning                    |
+| Several explanations fit sparse records            | Present useful hypotheses without choosing an unsupported winner |
+| Relevant searches cannot establish a reason        | Say it remains unknown and identify the search limits            |
 
 Working code establishes behavior, not its author's motivation. A regression test
 can reveal a protected case without explaining the original requirement. Several

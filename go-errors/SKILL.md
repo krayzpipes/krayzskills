@@ -11,7 +11,7 @@ causes, and explicit ownership of reporting.
 ## Construct and wrap
 
 - Validate required inputs early. Name the problem directly: `errors.New("store
-  is required")` or `fmt.Errorf("invalid interval %s", interval)`.
+is required")` or `fmt.Errorf("invalid interval %s", interval)`.
 - Wrap with `%w` when adding useful operation context and callers should retain
   access to the cause: `fmt.Errorf("load configuration: %w", err)`. Return an
   error unchanged when another wrapper adds no information. Do not wrap at

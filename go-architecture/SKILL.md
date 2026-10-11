@@ -38,13 +38,13 @@ or upstream format does not require rewriting business rules.
 These are responsibilities, not required package names. Combine them when
 separate packages would add ceremony without protecting a boundary.
 
-| Responsibility | Holds | Dependency direction |
-|---|---|---|
-| Business core | Values, invariants, pure decisions | No adapters or entrypoints |
-| Application operations | Use cases, orchestration, transaction boundaries | Core and contracts it consumes |
-| Integration adapters | Network, storage, vendor formats, conversion | Core values; implement consumed contracts |
-| Delivery adapters | CLI, HTTP handlers, jobs, request/response mapping | Application operations and core values |
-| Composition boundary | Configuration, concrete construction, lifecycle | Wires the above |
+| Responsibility         | Holds                                              | Dependency direction                      |
+| ---------------------- | -------------------------------------------------- | ----------------------------------------- |
+| Business core          | Values, invariants, pure decisions                 | No adapters or entrypoints                |
+| Application operations | Use cases, orchestration, transaction boundaries   | Core and contracts it consumes            |
+| Integration adapters   | Network, storage, vendor formats, conversion       | Core values; implement consumed contracts |
+| Delivery adapters      | CLI, HTTP handlers, jobs, request/response mapping | Application operations and core values    |
+| Composition boundary   | Configuration, concrete construction, lifecycle    | Wires the above                           |
 
 Separate read queries from write operations when their responsibilities,
 performance, or consistency needs diverge. A read-only query does not by itself

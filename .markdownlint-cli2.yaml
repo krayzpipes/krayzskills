@@ -1,0 +1,6 @@
+config:
+  default: true
+  # Long descriptions, tables, and upstream URLs are intentional.
+  MD013: false
+  # Prettier aligns table cells to their content.
+  MD060: false
